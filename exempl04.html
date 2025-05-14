@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+
+    <style>
+        html
+    </style>
+
+</head>
+
+
+
+<body>
+
+    <button id="btn">Qual é sua Cor?</button>
+    <h2 id="hexCode">#dc143c</div>
+    </h2>
+
+
+</body>
+<script>
+
+    const btn = document.getElementById("btn");
+
+    let hex = document.getElementById("hexCode");
+
+
+    function mudarCor() {
+        let letters = "0123456789ABCDEF";
+
+        let color = "#";
+
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    btn.addEventListener("click", () => {   
+        
+        document.body.style.backgroundColor = mudarCor();
+        hex.innerHTML = mudarCor();
+
+})
+
+
+
+</script>
+
+</html>
